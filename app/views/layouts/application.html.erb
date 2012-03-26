@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Blog</title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+<div id="main">
+  <div id="header-main">
+	  <img src="logo.png" alt="logo web" class="head-logo">
+      <div class="menu-nav">
+        <ul>
+        	<li><a href="#">Home</a></li>
+        	<li><a href="#">About Us</a></li>
+        </ul>
+    </div>
+        <div class="clear"></div>
+  </div>
+  <div id="body-main">
+	  <div class="body-left">
+          <%= yield %>
+      </div>
+	  <div class="body-right">
+      <h3>Categories</h3> <hr />
+      <% @categories.each do |category| %>
+        <div class="right-list">
+            <h3><%= category.category_name %></h3>
+        </div>
+      <% end %><br/>
+      <h3>Tags</h3> <hr />
+      <% @tags.each do |tag| %>
+        <div class="right-list">
+            <h3><%= tag.tag_name %></h3>
+        </div>
+      <% end %>
+    </div>
+    <div class="clear"></div>
+  </div>
+        <div id="footer">
+            <hr/>
+            <p class="copyright">Copyright (c) 2010</p>
+            <div class="menu-nav">
+                <ul>
+	            	<li><a href="#">Home</a></li>
+	            	<li><a href="#">About Us</a></li>
+	            </ul>
+            </div>
+        </div>
+	</div>
+
+
+</body>
+</html>

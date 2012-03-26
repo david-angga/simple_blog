@@ -1,0 +1,196 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+#main {
+	width: 960px;
+	border: 1px solid #ccc;
+  margin: 0 auto;
+}
+
+#header-main {
+	background: -moz-linear-gradient(-90deg, #6A7176, #4D5256) repeat scroll 0 0 transparent;
+  border-bottom: 1px solid #44484B;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.37);
+  height: 100px;
+  overflow: visible;
+  padding: 9px 30px;
+  margin-bottom: 10px;
+  position: relative;
+  text-shadow: 0 1px 0 black;
+  z-index: 900;
+}
+
+.head-logo {
+	padding: 10px 10px;
+}
+
+#header-main .menu-nav {
+	float: right;
+	margin-right: 10px;
+  margin-top: 58px; 
+}
+
+#footer .menu-nav {
+	float: right;
+	padding: 0px 0px;
+    margin-top: 10px;
+}
+
+.menu-nav ul li {
+	display: inline;
+    border-left: 1px solid #000;
+    padding-left: 5px;
+}
+
+.menu-nav ul li:first-child {
+    border-left: 0px;
+    padding-left: 5px;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-nav a:hover {
+	background-color: #ccc;
+    text-decoration:none;
+}
+
+.clear{
+    clear: both;
+}
+
+#body-main {
+	margin-left: 10px;
+    padding: 0px;
+}
+
+.body-left {
+	margin-right: 10px;
+    margin-left: 10px;
+    width: 765px;
+    float: left;
+}
+
+.headline h3 {
+    font-size: 2.2em;
+    padding: 0px;
+    margin: 0px;
+}
+
+.list-terbaru {
+    font-size: 2em;
+    padding: 0px;
+    margin: 0px;
+}
+
+.headline .date{
+    font-size: 1em;
+}
+
+.tanggal-terbaru{
+    font-size: .8em;
+}
+
+.date {
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: absolute;
+}
+
+.headline img {
+    float: left;
+    margin: 10px 10px 0px 0px;
+}
+
+.headline p {
+    margin-top: 7px;
+    margin-bottom: -5px;
+}
+
+.read-more {
+    background-color: #000;
+    height: 20px;
+    text-align: right;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+}
+
+.read-more a {
+    color: #fff;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.left-list {
+    margin-bottom: 0px;
+}
+
+.body-right{
+    position: relative;
+    float: left;
+    width: 150px;
+}
+
+.body-right img {
+    float: left;
+    margin-right: 10px;
+}
+
+.body-right .right-list {
+    position: relative;
+}
+
+.body-right .read-more {
+    background-color: #fff;
+    height: 10px;
+    text-align: right;
+    margin-top: 0px;
+}
+
+.body-right .read-more a {
+    color: #ccc;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+.tanggal-list {
+    margin: 0px;
+    font-size: .6em;
+}
+
+.body-right .right-list h3 {
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.body-right .right-list p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#footer {
+    position: relatif;
+    padding: 0 10px 25px 10px;
+}
+
+#footer p {
+    height: 0;
+    margin-top: 0;
+    float: left;
+}
+
+.menu-foot {
+    float: left;
+    margin-top: -18px;
+    margin-left: 455px;
+}
