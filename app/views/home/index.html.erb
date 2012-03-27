@@ -1,12 +1,4 @@
-<div class="headline">
-  <% unless @posts.blank? %>
-    <h3><%=h @posts.first.post_title %></h3>
-    <span class="date"><%= @posts.first.created_at %></span><br>
-    <p><%= @posts.first.post_content[0..200] %></p>
-    <div class="read-more"><a href="#">read more ></a></div>
-  <% end %>
-</div>
-Newest<hr />
+
 <% @posts.each do |post| %>
   <h3 class="list-terbaru"><%=h post.post_title %></h3>
   <span class="tanggal-terbaru"><%= post.created_at %></span>
