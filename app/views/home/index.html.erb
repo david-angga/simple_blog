@@ -1,8 +1,19 @@
-
-<% @posts.each do |post| %>
-  <h3 class="list-terbaru"><%=h post.post_title %></h3>
-  <span class="tanggal-terbaru"><%= post.created_at %></span>
-  <p class="left-list"><%= post.post_content[0..100] %></p>
-  <div class="read-more"><a href="#">read more ></a></div>
+<% if @posts.blank? %>
+  <div class="hero-unit">
+    <h1>Welcome!</h1>
+    <p>All..</p>
+  </div>
+<% else %>
+  <% @posts.each_with_index do |post,i| %>
+    <% if i==0 %>
+      <div class="hero-unit">
+        <h1><%=h post.post_title %></h1>
+        <p><%=raw post.post_content[0..100] %></p>
+        <a href="/" class="btn btn-primary btn-large">read more..</a>
+      </div>
+    <% else %>
+      
+    <% end %>
+  <% end %>
 <% end %>
 

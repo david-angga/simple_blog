@@ -2,49 +2,33 @@
 <html>
 <head>
   <title>Simple Blog</title>
-  <%= stylesheet_link_tag    "application" %>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-
-<div id="main">
-  <div id="header-main">
-	  <img src="logo.png" alt="logo web" class="head-logo">
-      <div class="menu-nav">
-        <ul>
-        	<li><a href="#">Home</a></li>
-        	<li><a href="#">About Us</a></li>
-        </ul>
-    </div>
-        <div class="clear"></div>
-  </div>
-  <div id="body-main">
-	  <div class="body-left">
-          <%= yield %>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="brand" href="#">Simple Blog</a>
       </div>
-	  <div class="body-right">
-      <h3>Categories</h3> <hr />
-      <% @categories.each do |category| %>
-        <div class="right-list">
-            <h3><%= category.category_name %></h3>
-        </div>
-      <% end %><br/>
     </div>
-    <div class="clear"></div>
   </div>
-        <div id="footer">
-            <hr/>
-            <p class="copyright">Copyright (c) 2010</p>
-            <div class="menu-nav">
-                <ul>
-	            	<li><a href="#">Home</a></li>
-	            	<li><a href="#">About Us</a></li>
-	            </ul>
-            </div>
-        </div>
-	</div>
+  
+  <div class="container">
+    <div class="row">
+      <div class="span9"><%= yield %></div>
+      <div class="span3">
+        <ul class="nav nav-list">
+          <li class="nav-header">Categories</li>
+          <% @categories.each do |cat| %>
+            <li><a href="/"><%= cat.category_name %></a></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
 
 
 </body>
